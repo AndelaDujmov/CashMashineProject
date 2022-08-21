@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Registration Page</title>
+</head>
+<body>
+<div align="center">
+    <h1>Please enter your data!</h1>
+    <h2 th:text="${success}">Here you can register</h2>
+    <div class="container mt-5">
+        <h3 align="justify">Registration using Thymeleaf + Spring Data JPA + Spring Boot</h3>
+    </div>
+    <div class="card-body">
+    <form th:action="@{/registration}" method="post" th:object="${userCreationDto}">
+        <div class="form-group">
+            <label for="first">First Name</label>
+            <input type="text" class="form-control" id="first" aria-describedby="emailHelp" th:field="*{userCreationDto.firstName}">
+        </div>
+    <div class="form-group">
+        <label for="last">Last Name</label>
+        <input type="text" class="form-control"  id = "last" aria-describedby="emailHelp" th:field="*{userCreationDto.lastName}">
+    </div>
+
+    <div class="form-group">
+        <label for="code">Code Name</label>
+        <input type="text" class="form-control"  id = "code" aria-describedby="emailHelp" th:field="*{userCreationDto.codeName}">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" class="form-control" id = "password"   aria-describedby="emailHelp" th:field="*{userCreationDto.lastName}">
+    </div>
+    </form>
+    <button type="submit">Submit</button>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Balance on date-------2022-08-29T09:54:27.815525343
+Current deposit status: 1000.0
+Transaction----------Amount
+pls work---------- 516.0
+2022-08-23----------516.0----------
+CASH-------------
